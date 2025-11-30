@@ -1,15 +1,28 @@
 """
 Script to generate architecture diagram image
-Requires: pip install diagrams graphviz
+
+Dependencies:
+- diagrams library: pip install diagrams
+- graphviz system package (required by diagrams):
+  - macOS: brew install graphviz
+  - Linux: sudo apt-get install graphviz
+  - Windows: Download from https://graphviz.org/
+
+Note: This script is optional. Architecture diagrams can also be generated
+using the Mermaid diagrams in ARCHITECTURE_DIAGRAM.md (recommended).
 """
 
+# Optional utility script - diagrams library is NOT required for the main project
+# This script is only needed if you want to generate architecture images programmatically
+# Alternative: Use Mermaid diagrams in ARCHITECTURE_DIAGRAM.md (recommended)
+# The ImportError is handled gracefully below - this is expected if diagrams is not installed
 try:
-    from diagrams import Diagram, Cluster, Edge
-    from diagrams.onprem.client import User
-    from diagrams.programming.language import Python
-    from diagrams.onprem.compute import Server
-    from diagrams.onprem.database import Influxdb
-    from diagrams.generic.blank import Blank
+    from diagrams import Diagram, Cluster, Edge  # type: ignore[import-untyped]
+    from diagrams.onprem.client import User  # type: ignore[import-untyped]
+    from diagrams.programming.language import Python  # type: ignore[import-untyped]
+    from diagrams.onprem.compute import Server  # type: ignore[import-untyped]
+    from diagrams.onprem.database import Influxdb  # type: ignore[import-untyped]
+    from diagrams.generic.blank import Blank  # type: ignore[import-untyped]
     
     with Diagram("FitTelligence Multi-Agent Architecture", filename="architecture_diagram", show=False, direction="TB"):
         
@@ -60,14 +73,23 @@ try:
     
 except ImportError:
     print("""
-To generate architecture diagram image:
-1. Install dependencies:
-   pip install diagrams graphviz
+⚠️  Diagrams library not installed.
+
+This script is OPTIONAL. You have better alternatives:
+
+📊 RECOMMENDED: Use Mermaid diagrams
+   - See ARCHITECTURE_DIAGRAM.md
+   - Go to https://mermaid.live/
+   - Copy the Mermaid code and export as PNG
+
+🔧 If you want to use this script:
+1. Install Python library:
+   pip install diagrams
 
 2. Install Graphviz system package:
    - macOS: brew install graphviz
    - Linux: sudo apt-get install graphviz
-   - Windows: Download from https://graphviz.org/
+   - Windows: Download from https://graphviz.org/download/
 
 3. Run this script:
    python create_architecture_image.py
