@@ -20,6 +20,12 @@ A comprehensive multi-agent system demonstrating advanced ADK concepts for fitne
 
 **Value:** Reduces program creation time from 6-12 hours to minutes, eliminates $400-2000 in consultation costs, and provides 24/7 access to comprehensive coaching services.
 
+## 📊 System Architecture
+
+![FitTelligence Architecture](architecture_diagram.png)
+
+*Complete system architecture showing the sequential flow of 5 specialized agents, shared services, and agent-to-agent communication protocol.*
+
 ## ✨ Key Concepts Demonstrated
 
 ### 1. Multi-Agent System (Sequential Agents) ✓
