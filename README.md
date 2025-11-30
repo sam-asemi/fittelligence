@@ -114,8 +114,7 @@ fittelligence-1/
 │
 └── shared/                          # Shared utilities
     ├── __init__.py
-    ├── agent_communication.py      # A2A Protocol implementation
-    └── agent_communication.py      # A2A tools
+    └── agent_communication.py      # A2A Protocol implementation
 ```
 
 ## 🚀 Quick Start
