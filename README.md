@@ -9,7 +9,6 @@ A comprehensive multi-agent system demonstrating advanced ADK concepts for fitne
 
 - **[Kaggle Submission Writeup](SUBMISSION_WRITEUP.md)** - Complete project submission document
 - **[Kaggle Technical Details](KAGGLE_SUBMISSION.md)** - Technical implementation details
-- **[Final Checklist](FINAL_CHECKLIST.md)** - Pre-submission verification checklist
 
 ## 🎯 Project Overview
 
